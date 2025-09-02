@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+/* Custom styles for Boafo) app */
+
+@layer base {
+    body {
+        font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        background-color: #FAF7F0;
+        color: #1f2937;
+        font-size: 16px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    * {
+        scroll-behavior: smooth;
+        font-family: inherit;
+    }
+}
+
+@layer components {
+    .brand-logo {
+        font-family: 'Inter', sans-serif;
+        font-weight: 800;
+        color: #1B5E20;
+        font-size: 1.5rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        letter-spacing: -0.025em;
+    }
+
+    /* Enhanced animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes pulse {
+
+        0%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.05);
+        }
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 0.6s ease-out;
+    }
+
+    .animate-pulse-slow {
+        animation: pulse 2s infinite;
+    }
+
+    /* Enhanced trend colors with better contrast */
+    .trend-up {
+        color: #059669;
+        font-weight: 600;
+    }
+
+    .trend-down {
+        color: #dc2626;
+        font-weight: 600;
+    }
+
+    .trend-neutral {
+        color: #6b7280;
+        font-weight: 600;
+    }
+
+    /* Glass morphism effect */
+    .glass {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+    }
+
+
+}
