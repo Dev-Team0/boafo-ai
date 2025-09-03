@@ -20,6 +20,8 @@
     }
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer components {
     .brand-logo {
         font-family: 'Inter', sans-serif;
